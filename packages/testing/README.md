@@ -51,7 +51,7 @@ This will have the following side effect:
   - enables cleanup after each test for `fixture` and `litFixture`
 
 ## Automating Tests
-Normally, you'll want some way of automatically running all of your tests, for that we recommend karma via `@open-wc/testing-karma` and browserstack via `@open-wc/testing-karma-bs`.  
+Normally, you'll want some way of automatically running all of your tests, for that we recommend karma via `@open-wc/testing-karma` and browserstack via `@open-wc/testing-karma-bs`.
 If you use a different runner or a different browser grid then these steps can be skipped.
 
 ::: tip Note
@@ -118,14 +118,14 @@ describe('True Checking', () => {
 
   it('false values will have a light-dom of <p>NOPE</p>', async () => {
     const el = await fixture('<get-result></get-result>');
-    expect(el).dom.to.semantically.equal('<get-result><p>NOPE</p></get-result>');
+    expect(el).dom.to.equal('<get-result><p>NOPE</p></get-result>');
   });
 
   it('true values will have a light-dom of <p>YEAH</p>', async () => {
     const foo = 1;
     const el = await litFixture(html`<get-result .success=${foo === 1}></get-result>`);
     expect(el.success).to.be.true;
-    expect(el).dom.to.semantically.equal('<get-result><p>YEAH</p></get-result>');
+    expect(el).dom.to.equal('<get-result><p>YEAH</p></get-result>');
   });
 });
 ```

@@ -17,6 +17,6 @@ describe('BDD', () => {
 
   it('uses chai dom equals plugin', async () => {
     const el = await fixture(`<div><!-- comment --><h1>${'Hey'}  </h1>  </div>`);
-    expect(el).dom.to.semantically.equal('<div><h1>Hey</h1></div>');
+    expect(el).dom.to.equal('<div><h1>Hey</h1></div>');
   });
 });
