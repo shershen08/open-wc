@@ -39,9 +39,9 @@ npx @open-wc/dev-server --open demo
 ```
 To change the server's root directory:
 ```bash
-npx @open-wc/dev-server ./dist
+npx @open-wc/dev-server ./dist --open
 # or
-npx @open-wc/dev-server --root-dir ./dist
+npx @open-wc/dev-server --root-dir ./dist --open
 ```
 
 #### Single Page App
